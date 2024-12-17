@@ -1,66 +1,44 @@
-import { useState } from "react";
-import "./App.css";
-import logo from "./assets/logo.png";
-import menu from "./assets/menu.png";
+import Navbar from "./components/Navbar.jsx";
+import "./index.css";
+import example1 from "./assets/example1.jpg";
+import example2 from "./assets/example2.jpg";
+import example3 from "./assets/example3.jpg";
+
+// import Home from "./components/Home.jsx";
+// import "./App.css";
 
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
-    <div className="w-full h-full absolute bg-gradient-to-r from-blue-400 to-emerald-400">
-      <header className="flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md">
-        <a href="#">
-          <img
-            src={logo}
-            alt="logo"
-            className="w-20 hover:scale-105 transition-all"
-          />
-        </a>
-        <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-          <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">
-            Home
-          </li>
-          <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">
-            About Us
-          </li>
-          <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">
-            Contact
-          </li>
-          <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">
-            Pricing
-          </li>
-        </ul>
-
-        <i className="bx bx-menu xl:hidden block text-5xl cursor-pointer">
-          <a href="#">
-            <img
-              src={menu}
-              alt="menu"
-              className="w-20 hover:scale-105 transition-all"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            />
-          </a>
-        </i>
-
-        <div
-          className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform
-            ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
-          style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
-        >
-          <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer">
-            Home
-          </li>
-          <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer">
-            About Us
-          </li>
-          <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer">
-            Contact
-          </li>
-          <li className="list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer">
-            Pricing
-          </li>
-        </div>
+    <div className="w-full h-screen absolute bg-gradient-to-r from-blue-400 to-emerald-400">
+      <header>
+        <Navbar />
       </header>
+      <main className="flex items-center justify-around m-1 p-1 flex-wrap">
+        <div className=" m-1 p-1 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img className="rounded-lg" src={example1} alt="" />
+          </a>
+        </div>
+        <div className="m-1 p-1 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img className="rounded-lg" src={example2} alt="" />
+          </a>
+        </div>
+        <div className="m-1 p-1 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img className="rounded-lg" src={example3} alt="" />
+          </a>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quam
+            ullam, dicta pariatur facilis adipisci at repudiandae soluta earum,
+            nulla facere. Tempore corporis harum, et praesentium porro
+            necessitatibus. Animi, laboriosam.
+          </p>
+        </div>
+      </main>
+      <footer></footer>
     </div>
   );
 };
