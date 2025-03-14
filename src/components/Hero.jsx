@@ -18,22 +18,6 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl">
-          <div className="relative z-1 p-0.5 rounded-2xl">
-            <div>
-              <img
-                src={chef}
-                className="w-full scale-[1] translate-y-[-15%] md:scale-[.8] rounded-xl border-n-5 border-4 drop-shadow-lg"
-                width={1024}
-                height={490}
-                alt="chef"
-              />
-            </div>
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-        </div>
       </div>
     </Section>
   );

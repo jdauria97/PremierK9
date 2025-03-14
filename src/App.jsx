@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
+import Carousel from "./components/Carousel";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
         <Hero />
+        <Carousel />
         <About />
         <Services />
         <Pricing />
