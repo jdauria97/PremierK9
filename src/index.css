@@ -18,7 +18,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-cyan-200 text-n-1 text-base;
+    @apply font-sans text-base;
   }
 }
 

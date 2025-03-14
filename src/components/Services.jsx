@@ -5,7 +5,7 @@ import { services } from "../constants";
 const Services = () => {
   return (
     <Section id="services">
-      <div className="container relative z-2">
+      <div className="container relative z-2 my-5">
         <Heading
           className="md:max-w-md lg:max-w-2xl flex justify-center drop-shadow-lg"
           title="Our Offered Services"
