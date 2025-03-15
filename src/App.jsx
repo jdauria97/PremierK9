@@ -3,9 +3,9 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Carousel from "./components/Carousel";
+import Faq from "./components/Faq";
 
 const App = () => {
   return (
@@ -16,8 +16,8 @@ const App = () => {
         <Carousel />
         <About />
         <Services />
-        <Pricing />
         <Contact />
+        <Faq />
         <Footer />
       </div>
     </>
