@@ -1,4 +1,4 @@
-import brainwave from "./PremierK9.jpg";
+import logo from "./PremierK9.jpg";
 import background from "./photos/menubackground.jpg";
 import chef from "./photos/chef.jpg";
 
@@ -18,7 +18,7 @@ import carousel7 from "./carouselPhotos/carousel7.jpg";
 import carousel8 from "./carouselPhotos/carousel8.jpg";
 
 export {
-  brainwave,
+  logo,
   background,
   chef,
   discordBlack,

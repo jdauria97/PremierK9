@@ -10,19 +10,31 @@ const Faq = () => {
   };
 
   const faqItems = [
-    { question: "Question 1?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur." },
-    { question: "Question 2?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur." },
-    { question: "Question 3?", answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur." },
+    {
+      question: "Question 1?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur.",
+    },
+    {
+      question: "Question 2?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur.",
+    },
+    {
+      question: "Question 3?",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident omnis et nobis delectus tenetur rerum, dicta iusto iste asperiores fugit facilis, voluptates harum velit nulla quo. Nisi, ab consectetur.",
+    },
   ];
 
   return (
-    <Section className="container my-3 mx-auto p-4" id="faq">
-      <div className="container relative z-2 my-5">
+    <Section className="container my-10 mx-auto p-4" id="faq">
+      <div className="container relative z-2 my-10">
         <Heading
-          className="flex justify-center drop-shadow-lg"
+          className="flex justify-center drop-shadow-lg mb-10"
           title="Frequently Asked Questions"
         />
-        <div class="bg-white border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div className="bg-white border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div className="block relative p-2 dark:bg-gray-800 rounded-lg">
             {faqItems.map((item, index) => (
               <div key={index} className="m-2">
@@ -33,7 +45,9 @@ const Faq = () => {
                   {item.question}
                 </button>
                 {activeIndex === index && (
-                  <p className="p-4 mt-2 bg-white border-gray-200 rounded-lg">{item.answer}</p>
+                  <p className="p-4 mt-2 bg-white border-gray-200 rounded-lg">
+                    {item.answer}
+                  </p>
                 )}
               </div>
             ))}

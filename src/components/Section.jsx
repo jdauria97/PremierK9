@@ -3,7 +3,7 @@ const Section = ({ className, id, customPaddings, children }) => {
     <div
       id={id}
       className={`relative ${
-        customPaddings || `py-10 lg:py-16 xl:py-20 ${className || ""}`
+        customPaddings || `py-16 lg:py-20 xl:py-24 ${className || ""}`
       }`}
     >
       {children}

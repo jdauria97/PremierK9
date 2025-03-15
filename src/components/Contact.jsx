@@ -32,13 +32,13 @@ const Contact = () => {
   };
 
   return (
-    <Section class="container" id="contact">
-      <div className="container relative z-2 my-5">
+    <Section className="container" id="contact">
+      <div className="container relative z-2 my-10">
         <Heading
-          className="md:max-w-md lg:max-w-2xl flex justify-center drop-shadow-lg"
+          className="md:max-w-md lg:max-w-2xl flex justify-center drop-shadow-lg mb-10"
           title="Contact Us"
         />
-        <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div className="block relative p-0.5 dark:bg-gray-800 rounded-lg">
             <form ref={form} onSubmit={sendEmail}>
               <div className="m-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -112,7 +112,9 @@ const Contact = () => {
                   />
                   <div className="relative w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                   <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                    {toggleValue ? "Yes, My dog is spayed or neutered." : "No, My dog is not spayed or neutered."}
+                    {toggleValue
+                      ? "Yes, My dog is spayed or neutered."
+                      : "No, My dog is not spayed or neutered."}
                   </span>
                 </label>
               </div>
