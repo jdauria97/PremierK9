@@ -31,7 +31,7 @@ const Carousel = () => {
     <Section id="carousel" className="flex justify-center items-center">
       <div
         id="default-carousel"
-        className="relative w-1/2 h-[30vh]"
+        className="relative w-[50vw] h-[50vw] md:w-[40vw] md:h-[40vw] lg:w-[30vw] lg:h-[30vw] xl:w-[25vw] xl:h-[25vw] 2xl:w-[20vw] 2xl:h-[20vw] overflow-hidden rounded-lg"
         data-carousel="slide"
       >
         <div className="relative w-full h-full overflow-hidden rounded-lg flex justify-center items-center">
