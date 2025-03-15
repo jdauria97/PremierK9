@@ -28,7 +28,10 @@ const Carousel = () => {
   };
 
   return (
-    <Section id="carousel" className="flex justify-center items-center">
+    <Section
+      id="carousel"
+      className="container relative flex justify-center items-center"
+    >
       <div
         id="default-carousel"
         className="relative w-[50vw] h-[50vw] md:w-[40vw] md:h-[40vw] lg:w-[30vw] lg:h-[30vw] xl:w-[25vw] xl:h-[25vw] 2xl:w-[20vw] 2xl:h-[20vw] overflow-hidden rounded-lg"
@@ -190,57 +193,57 @@ const Carousel = () => {
             data-carousel-slide-to="7"
           ></button>
         </div>
-        <button
-          type="button"
-          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-          onClick={handlePrev}
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-          onClick={handleNext}
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </span>
-        </button>
       </div>
+      <button
+        type="button"
+        className="absolute top-1/2 left-6 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+        onClick={handlePrev}
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
+          <svg
+            className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span className="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        className="absolute top-1/2 right-6 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 cursor-pointer group focus:outline-none"
+        data-carousel-next
+        onClick={handleNext}
+      >
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
+          <svg
+            className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span className="sr-only">Next</span>
+        </span>
+      </button>
     </Section>
   );
 };
