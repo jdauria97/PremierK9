@@ -9,13 +9,13 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "About Us",
-    url: "#about",
+    title: "home",
+    url: "./app.jsx",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "About Us",
+    url: "#about",
   },
   {
     id: "2",
@@ -33,7 +33,6 @@ export const navigation = [
     url: "#faq",
   },
 ];
-
 
 export const services = [
   {
@@ -93,8 +92,6 @@ export const services = [
     status: "progress",
   },
 ];
-
-
 
 export const aboutContent = [
   {
