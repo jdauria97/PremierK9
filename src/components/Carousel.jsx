@@ -9,90 +9,182 @@ import {
   carousel7,
   carousel8,
 } from "../assets";
+import { useState } from "react";
 
 const Carousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = 8;
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <Section id="carousel">
-      <div id="default-carousel" class="relative w-full" data-carousel="slide">
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel1} alt="..." />
+    <Section id="carousel" className="flex justify-center items-center">
+      <div
+        id="default-carousel"
+        className="relative w-1/2 h-[30vh]"
+        data-carousel="slide"
+      >
+        <div className="relative w-full h-full overflow-hidden rounded-lg flex justify-center items-center">
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 0 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel1}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel2} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 1 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel2}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel3} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 2 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel3}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel4} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 3 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel4}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel5} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 4 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel5}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel6} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 5 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel6}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel7} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 6 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel7}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div class="duration-700 ease-in-out" data-carousel-item>
-            <img src={carousel8} alt="..." />
+          <div
+            className={`duration-700 ease-in-out flex justify-center items-center ${
+              activeIndex === 7 ? "block" : "hidden"
+            }`}
+            data-carousel-item
+          >
+            <img
+              src={carousel8}
+              alt="..."
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="true"
             aria-label="Slide 1"
             data-carousel-slide-to="0"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 2"
             data-carousel-slide-to="1"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 3"
             data-carousel-slide-to="2"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 4"
             data-carousel-slide-to="3"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 5"
             data-carousel-slide-to="4"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 6"
             data-carousel-slide-to="5"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 7"
             data-carousel-slide-to="6"
           ></button>
           <button
             type="button"
-            class="w-3 h-3 rounded-full"
+            className="w-3 h-3 rounded-full"
             aria-current="false"
             aria-label="Slide 8"
             data-carousel-slide-to="7"
@@ -100,12 +192,13 @@ const Carousel = () => {
         </div>
         <button
           type="button"
-          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-prev
+          onClick={handlePrev}
         >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
             <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -119,17 +212,18 @@ const Carousel = () => {
                 d="M5 1 1 5l4 4"
               />
             </svg>
-            <span class="sr-only">Previous</span>
+            <span className="sr-only">Previous</span>
           </span>
         </button>
         <button
           type="button"
-          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-next
+          onClick={handleNext}
         >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 group-hover:bg-gray-700">
             <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              className="w-4 h-4 text-white dark:text-gray-500 rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -143,7 +237,7 @@ const Carousel = () => {
                 d="m1 9 4-4-4-4"
               />
             </svg>
-            <span class="sr-only">Next</span>
+            <span className="sr-only">Next</span>
           </span>
         </button>
       </div>
