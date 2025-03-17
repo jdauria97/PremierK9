@@ -6,6 +6,7 @@ import Section from "./Section";
 const Contact = () => {
   const form = useRef();
   const [toggleValue, setToggleValue] = useState(false);
+  const [message, setMessage] = useState(""); // Add state for message
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,9 +21,14 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("Your message has been sent successfully!"); // Display success message as alert
+          form.current.reset(); // Clear the form
         },
         (error) => {
           console.log(error.text);
+          alert(
+            "An error occurred while sending your message. Please try again."
+          ); // Display error message as alert
         }
       );
   };
@@ -95,7 +101,7 @@ const Contact = () => {
                 <label className="block">How long have you had your dog?</label>
                 <input
                   type="text"
-                  name="dog_duration"
+                  name="owned_time"
                   className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="Approximate Time"
                   required
@@ -121,7 +127,8 @@ const Contact = () => {
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">
-                  What specific behavior or obedience issues would you like to address?
+                  What specific behavior or obedience issues would you like to
+                  address?
                 </label>
                 <textarea
                   name="issues"
@@ -263,6 +270,11 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            {message && (
+              <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {message}
+              </div>
+            )}
           </div>
         </div>
       </div>
