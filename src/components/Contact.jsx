@@ -12,10 +12,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_qfmik0f", // Replace with your EmailJS service ID
+        "template_yqauk7p", // Replace with your EmailJS template ID
         form.current,
-        "YOUR_USER_ID"
+        "94m0fa9HHxlS07rnR" // Replace with your EmailJS user ID
       )
       .then(
         (result) => {
@@ -45,7 +45,7 @@ const Contact = () => {
                 <label className="block">Name:</label>
                 <input
                   type="text"
-                  name="user_name"
+                  name="client_name"
                   className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="Your Name"
                   required
@@ -55,7 +55,7 @@ const Contact = () => {
                 <label className="block">Email:</label>
                 <input
                   type="email"
-                  name="user_email"
+                  name="client _email"
                   className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="Your Email"
                   required
@@ -105,6 +105,7 @@ const Contact = () => {
                 <label className="flex-col items-center cursor-pointer">
                   Is your dog spayed or neutered?
                   <input
+                    name="spayed_neutered"
                     type="checkbox"
                     value={toggleValue}
                     onChange={handleToggleChange}
@@ -120,11 +121,10 @@ const Contact = () => {
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">
-                  What specific behavior or obedience issues would you like to
-                  address?
+                  What specific behavior or obedience issues would you like to address?
                 </label>
                 <textarea
-                  name="message"
+                  name="issues"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., pulling on the leash, jumping, barking, etc."
                   required
@@ -135,7 +135,7 @@ const Contact = () => {
                   What are your main goals for training your dog?
                 </label>
                 <textarea
-                  name="message"
+                  name="goals"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., better obedience,socialization, addressing specific behaviors, etc."
                   required
@@ -146,7 +146,7 @@ const Contact = () => {
                   Have you tried any training methods or classes before?
                 </label>
                 <textarea
-                  name="message"
+                  name="prev_training"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="What worked or didn’t work?"
                   required
@@ -157,7 +157,7 @@ const Contact = () => {
                   How does your dog behave around new people and other dogs?
                 </label>
                 <textarea
-                  name="message"
+                  name="behavior"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., friendly, fearful, aggressive, etc."
                   required
@@ -169,7 +169,7 @@ const Contact = () => {
                   your dog?
                 </label>
                 <textarea
-                  name="message"
+                  name="triggers"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., loud noises, strangers, other dogs, etc."
                   required
@@ -180,7 +180,7 @@ const Contact = () => {
                   Does your dog have any fears or anxieties?
                 </label>
                 <textarea
-                  name="message"
+                  name="fears"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., separation, thunderstorms, car rides, etc."
                   required
@@ -235,7 +235,7 @@ const Contact = () => {
                   How much time can you commit to training each week?
                 </label>
                 <textarea
-                  name="message"
+                  name="time"
                   className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
                   placeholder="e.g., 15 minutes a day, 1 hour a day, 2 hours a day, etc."
                   required
@@ -256,6 +256,7 @@ const Contact = () => {
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <button
                   type="submit"
+                  value="Send"
                   className="bg-blue-500 text-white py-2 px-4 rounded-lg"
                 >
                   Send
