@@ -11,6 +11,23 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const formElements = form.current.elements;
+    for (let element of formElements) {
+      if (element.hasAttribute("required") && !element.value.trim()) {
+        element.focus();
+        return setMessage(
+          <div
+            class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+            role="alert"
+          >
+            <span class="font-medium">
+              `Please fill out the ${element.name.replace("_", " ")} field.`
+            </span>
+          </div>
+        );
+      }
+    }
+
     emailjs
       .sendForm(
         "service_qfmik0f", // Replace with your EmailJS service ID
@@ -49,62 +66,95 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">Name:</label>
-                <input
-                  type="text"
+                <textarea
                   name="client_name"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Name"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">Email:</label>
-                <input
+                <textarea
                   type="email"
                   name="client _email"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Email"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
+                />
+              </div>
+              <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <label className="block">Phone Number:</label>
+                <textarea
+                  type="number"
+                  name="client _phone"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
+                  placeholder="Your phone number, including area code"
+                  required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">Dog's Name:</label>
-                <input
-                  type="text"
+                <textarea
                   name="dog_name"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Dog's Name"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">Dog's Age:</label>
-                <input
-                  type="text"
+                <textarea
                   name="dog_age"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Dog's Age"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">Dog's Breed:</label>
-                <input
-                  type="text"
+                <textarea
                   name="dog_breed"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Dog's Breed"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <label className="block">How long have you had your dog?</label>
-                <input
-                  type="text"
+                <textarea
                   name="owned_time"
-                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Approximate Time"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -132,9 +182,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="issues"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., pulling on the leash, jumping, barking, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -143,9 +197,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="goals"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., better obedience,socialization, addressing specific behaviors, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -154,9 +212,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="prev_training"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="What worked or didn’t work?"
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -165,9 +227,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="behavior"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., friendly, fearful, aggressive, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -177,9 +243,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="triggers"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., loud noises, strangers, other dogs, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -188,9 +258,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="fears"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., separation, thunderstorms, car rides, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -243,9 +317,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="time"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="e.g., 15 minutes a day, 1 hour a day, 2 hours a day, etc."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -255,9 +333,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="message"
-                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900"
+                  className="my-2 border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Any additional information you would like to share."
                   required
+                  onInput={(e) => {
+                    e.target.style.height = "auto";
+                    e.target.style.height = `${e.target.scrollHeight}px`;
+                  }}
                 />
               </div>
               <div className="m-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
