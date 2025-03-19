@@ -81,7 +81,7 @@ const Contact = () => {
                 <label className="block">Email:</label>
                 <textarea
                   type="email"
-                  name="client _email"
+                  name="client_email"
                   className="border border-gray-300 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your Email"
                   required
