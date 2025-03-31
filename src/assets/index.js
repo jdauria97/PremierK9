@@ -1,6 +1,7 @@
 import logo from "./PremierK9.jpg";
 import background from "./photos/menubackground.jpg";
 import chef from "./photos/chef.jpg";
+import hero from "./hero/heroimg.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -33,5 +34,6 @@ export {
   carousel5,
   carousel6,
   carousel7,
-  carousel8
+  carousel8,
+  hero
 };
