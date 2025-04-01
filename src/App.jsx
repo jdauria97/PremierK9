@@ -10,7 +10,7 @@ import Faq from "./components/Faq";
 const App = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden bg-n-4">
+      <div>
         <Header />
         <Hero />
         <About />
