@@ -1,4 +1,4 @@
-import logo from "./PremierK9.jpg";
+import logo from "./logo/logo2.png";
 import background from "./photos/menubackground.jpg";
 import chef from "./photos/chef.jpg";
 import hero from "./hero/heroimg.png";
