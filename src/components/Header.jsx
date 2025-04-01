@@ -33,9 +33,9 @@ const Header = () => {
         openNavigation ? "bg-n-2" : "bg-n-2 backdrop-blur-sm"
       }`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-1">
         <a className="m-2 block w-[12rem] xl:mr-8" href="#hero">
-          <img src={logo} width={140} alt="logo" />
+          <img src={logo} width={100} alt="logo" />
         </a>
         <nav
           className={`${

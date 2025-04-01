@@ -2,6 +2,7 @@ import logo from "./logo/logo2.png";
 import background from "./photos/menubackground.jpg";
 import chef from "./photos/chef.jpg";
 import hero from "./hero/heroimg.png";
+import buttonImage from "./hero/button.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -35,5 +36,6 @@ export {
   carousel6,
   carousel7,
   carousel8,
-  hero
+  hero,
+  buttonImage
 };
