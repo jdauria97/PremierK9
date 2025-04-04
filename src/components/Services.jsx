@@ -10,15 +10,15 @@ const Services = () => {
           className="md:max-w-md lg:max-w-2xl flex justify-center drop-shadow-lg mb-10"
           title="Our Offered Services"
         />
-        <div className="grid gap-8 mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+        <div className="grid mb-8 rounded-lg shadow-xs  md:mb-12 md:grid-cols-2 bg-n-2">
           {services.map((item) => (
             <figure
-              className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700"
+              className="flex flex-col items-center justify-center p-8 text-center border border-gray-700"
               key={item.id}
             >
-              <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+              <blockquote className="max-w-2xl mx-auto mb-4 text-white">
                 <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold text-gray-900 ">
                     {item.title}
                   </h3>
                   <p className="my-4">{item.text}</p>

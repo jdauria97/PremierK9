@@ -34,8 +34,8 @@ const Faq = () => {
           className="flex justify-center drop-shadow-lg mb-10"
           title="Frequently Asked Questions"
         />
-        <div className="bg-white border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-          <div className="block relative p-2 dark:bg-gray-800 rounded-lg">
+        <div className="bg-white border-gray-200 rounded-lg shadow-sm">
+          <div className="block relative p-2">
             {faqItems.map((item, index) => (
               <div key={index} className="m-2">
                 <button

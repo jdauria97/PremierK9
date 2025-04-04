@@ -7,7 +7,7 @@ const About = () => {
     <Section className="container" id="about">
       <div className="flex flex-col items-center container relative z-2 my-10 mx-auto">
         <Heading className="drop-shadow-lg mb-10" title="About Us" />
-        <div className="bg-white border border-gray-600 rounded-lg shadow-sm dark:bg-n-2">
+        <div className="bg-n-2 border-gray-600 rounded-lg shadow-sm">
           <div className="p-5">
             <a href="#">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
