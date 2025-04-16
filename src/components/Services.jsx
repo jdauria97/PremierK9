@@ -21,6 +21,7 @@ const Services = () => {
                   <h3 className="text-lg font-semibold text-gray-900 ">
                     {item.title}
                   </h3>
+                  <img src={item.image} alt="" />
                   <p className="my-4">{item.text}</p>
                 </div>
               </blockquote>

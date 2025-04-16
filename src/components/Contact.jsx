@@ -95,7 +95,7 @@ const Contact = () => {
                 <label className="block">Phone Number:</label>
                 <textarea
                   type="number"
-                  name="client _phone"
+                  name="client_phone"
                   className="my-2 border border-gray-700 py-2 px-4 rounded-lg w-full text-gray-900 resize-none overflow-hidden"
                   placeholder="Your phone number, including area code"
                   required

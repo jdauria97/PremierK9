@@ -4,6 +4,12 @@ import {
   instagram,
   telegram,
   twitter,
+  icon1,
+  icon2,
+  icon3,
+  icon4,
+  icon5,
+  icon6,
 } from "../assets";
 
 export const navigation = [
@@ -37,6 +43,7 @@ export const navigation = [
 export const services = [
   {
     id: "0",
+    image: icon1,
     title: "Puppy Foundation Building",
     text: "For owners who want to learn the groundwork to help their puppy grow to be a respectful adult. This can include, but is not limited to; potty training, crate training, boundary setting, preparation for CGC testing or lifestyle planning to achieve specific goals.",
     date: "May 2023",
@@ -44,6 +51,7 @@ export const services = [
   },
   {
     id: "1",
+    image: icon2,
     title: "Basic Obedience",
     text: "Our basic obedience program is designed to teach essential skills that every dog and owner should know to create a well-behaved, reliable companion. This program is ideal for pet owners looking to establish a foundation in obedience while strengthening their bond with their dog.",
     date: "May 2023",
@@ -51,6 +59,7 @@ export const services = [
   },
   {
     id: "2",
+    image: icon3,
     title: "Advanced Obedience",
     text: "Our advanced obedience program is tailored for owners and dogs who have mastered basic commands and are ready to reach the next level of responsiveness, reliability, and control. This program is perfect for those seeking to improve their dog's skills in more challenging situations or who want to work towards off-leash reliability",
     date: "May 2023",
@@ -58,6 +67,7 @@ export const services = [
   },
   {
     id: "3",
+    image: icon4,
     title: "CGC testing/Therapy Dog Training",
     text: "This program prepares your dog to earn the American Kennel Club approved Canine Good Citizen (CGC) certification and develop the skills necessary to become a confident, gentle therapy dog. Whether your goal is to pass the CGC test, volunteer in hospitals, schools, or senior living centers, or simply have a well-behaved, sociable dog, this program is the perfect start.",
     date: "May 2023",
@@ -65,6 +75,7 @@ export const services = [
   },
   {
     id: "4",
+    image: icon5,
     title: "Service Animal Training",
     text: "Our service animal training program is designed for dogs that will provide essential support to individuals with disabilities. This program teaches advanced, specialized skills to ensure the dog can perform specific tasks reliably and safely while meeting the standards for public access.",
     date: "May 2023",
@@ -72,6 +83,7 @@ export const services = [
   },
   {
     id: "5",
+    image:  icon6,
     title: "Behavior Modification",
     text: "Every behavior modification program is custom designed to help dogs overcome behavioral challenges and learn positive, constructive behaviors. This program is ideal for dogs displaying issues like excessive barking, leash reactivity, separation distress, or fear-based behaviors. We provide a safe, supportive environment to address these behaviors.",
     date: "May 2023",
