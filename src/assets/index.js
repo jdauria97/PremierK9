@@ -6,6 +6,9 @@ import buttonImage from "./hero/button.png";
 import button1 from "./hero/button1.png";
 import button2 from "./hero/button2.png";
 
+import scrollIcon from "./icons/scroll.png";
+import scrollIconHover from "./icons/scrollHover.png";
+
 import icon1 from "./icons/icon1.png";
 import icon2 from "./icons/icon2.png";
 import icon3 from "./icons/icon3.png";
@@ -55,4 +58,6 @@ export {
   icon4,
   icon5,
   icon6,
+  scrollIcon,
+  scrollIconHover,
 };
